@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Hero = ({ t }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Intentar reproducir el video cuando el componente se monte
+      const playVideo = async () => {
+        try {
+          await video.play();
+          console.log('Video started playing');
+        } catch (error) {
+          console.error('Error playing video:', error);
+          // Si no puede reproducir automáticamente, intentar sin sonido
+          video.muted = true;
+          try {
+            await video.play();
+            console.log('Video started playing (muted)');
+          } catch (mutedError) {
+            console.error('Error playing muted video:', mutedError);
+          }
+        }
+      };
+
+      // Esperar un poco antes de intentar reproducir
+      setTimeout(playVideo, 100);
+    }
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -16,17 +44,24 @@ const Hero = ({ t }) => {
           <div className="relative overflow-hidden">
             {/* VIDEO LOCAL ACTIVADO */}
             <video
+              ref={videoRef}
               autoPlay
               loop
               muted
               playsInline
+              preload="auto"
+              poster=""
+              controls={false}
               className="absolute inset-0 w-full h-full object-cover"
               style={{
                 objectFit: 'cover',
                 objectPosition: 'center'
               }}
+              onLoadStart={() => console.log('Video loading started')}
+              onCanPlay={() => console.log('Video can play')}
+              onError={(e) => console.error('Video error:', e)}
             >
-              <source src="/video/0620.mp4" type="video/mp4" />
+              <source src="/video/0620-compressed.mp4" type="video/mp4" />
               Tu navegador no soporta videos HTML5.
             </video>
             
