@@ -14,24 +14,7 @@ const Hero = ({ t }) => {
         <div className="grid lg:grid-cols-2 h-full">
           {/* Video Column - Left Side */}
           <div className="relative overflow-hidden">
-            {/* Usamos un iframe de Synthesia por ahora, pero está preparado para cambiar a video local */}
-            {/* Si tienes un video local, descomenta el bloque de video y comenta el iframe */}
-            
-            {/* IFRAME DE SYNTHESIA (actual) */}
-            <iframe 
-              src="https://share.synthesia.io/1bef5265-8b18-4cc3-8ee1-9a5d9e7f75ca?autoplay=1&loop=1&muted=1" 
-              loading="eager" 
-              title="Synthesia video player - Kelce TS" 
-              allowFullScreen 
-              allow="autoplay; encrypted-media; fullscreen;" 
-              className="absolute inset-0 w-full h-full object-cover"
-              style={{
-                border: 'none'
-              }}
-            />
-            
-            {/* VIDEO LOCAL (descomentarlo cuando tengas el video) */}
-            {/* 
+            {/* VIDEO LOCAL ACTIVADO */}
             <video
               autoPlay
               loop
@@ -47,6 +30,20 @@ const Hero = ({ t }) => {
               <source src="/video/kelcets-hero.webm" type="video/webm" />
               Tu navegador no soporta videos HTML5.
             </video>
+            
+            {/* IFRAME DE SYNTHESIA (desactivado) */}
+            {/* 
+            <iframe 
+              src="https://share.synthesia.io/1bef5265-8b18-4cc3-8ee1-9a5d9e7f75ca?autoplay=1&loop=1&muted=1" 
+              loading="eager" 
+              title="Synthesia video player - Kelce TS" 
+              allowFullScreen 
+              allow="autoplay; encrypted-media; fullscreen;" 
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{
+                border: 'none'
+              }}
+            />
             */}
           </div>
 
