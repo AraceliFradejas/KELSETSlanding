@@ -129,9 +129,13 @@ export const translations = {
         terms: "Terms of Service"
       },
       social: {
-        follow: "Follow Us"
+        follow: "Follow Us",
+        twitter: "https://twitter.com/sosexpats_ai",
+        linkedin: "https://www.linkedin.com/in/araceli-fradejas/",
+        github: "https://github.com/AraceliFradejas"
       },
-      copyright: "© 2025 KelceTS S.L. – All rights reserved."
+      disclaimer: "KelceTS is a fictional project created for the Microsoft Power Up program's Conversational Agents module with Copilot Studio. This website demonstrates the integration of multilingual capabilities and AI assistants using Microsoft technologies. This is for educational purposes only and does not represent a real product or service.",
+      copyright: "© 2025 KelceTS S.L. – Developed by Araceli Fradejas – All rights reserved."
     }
   },
   
@@ -265,9 +269,13 @@ export const translations = {
         terms: "Términos de Servicio"
       },
       social: {
-        follow: "Síguenos"
+        follow: "Síguenos",
+        twitter: "https://twitter.com/sosexpats_ai",
+        linkedin: "https://www.linkedin.com/in/araceli-fradejas/",
+        github: "https://github.com/AraceliFradejas"
       },
-      copyright: "© 2025 KelceTS S.L. – Todos los derechos reservados."
+      disclaimer: "KelceTS es un proyecto ficticio creado para el módulo de Agentes Conversacionales con Copilot Studio del programa Microsoft Power Up. Este sitio web demuestra la integración de capacidades multilingües y asistentes de IA usando tecnologías Microsoft. Es solo con fines educativos y no representa un producto o servicio real.",
+      copyright: "© 2025 KelceTS S.L. – Desarrollado por Araceli Fradejas – Todos los derechos reservados."
     }
   }
 };
