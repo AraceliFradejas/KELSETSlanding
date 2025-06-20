@@ -26,8 +26,7 @@ const Hero = ({ t }) => {
                 objectPosition: 'center'
               }}
             >
-              <source src="/video/kelcets-hero.mp4" type="video/mp4" />
-              <source src="/video/kelcets-hero.webm" type="video/webm" />
+              <source src="/video/0620.mp4" type="video/mp4" />
               Tu navegador no soporta videos HTML5.
             </video>
             
