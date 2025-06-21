@@ -5,7 +5,6 @@ export const translations = {
       home: "Home",
       values: "Values",
       reviews: "Reviews",
-      multilingual: "Multilingual",
       contact: "Contact"
     },
     
@@ -89,16 +88,6 @@ export const translations = {
       ctaText: "Start Conversation"
     },
 
-    // Multilingual Support
-    multilingual: {
-      title: "Multilingual Customer Service",
-      subtitle: "Powered by Artificial Intelligence",
-      description: "Our customer service speaks perfectly all 24 official languages of the European Union thanks to artificial intelligence. No matter where you are or what language you speak, we're here to help you.",
-      languages: "24 EU Languages",
-      availability: "Available 24/7",
-      ctaText: "Get Support"
-    },
-    
     // Contact
     contact: {
       title: "Contact Us",
@@ -154,7 +143,6 @@ export const translations = {
       home: "Inicio",
       values: "Valores",
       reviews: "Reseñas",
-      multilingual: "Multilingüe",
       contact: "Contacto"
     },
     
@@ -236,16 +224,6 @@ export const translations = {
       subtitle: "¿Tienes dudas? Pregunta a nuestro asistente inteligente, impulsado por Microsoft Copilot Studio.",
       description: "Obtén respuestas instantáneas sobre nuestros productos, envíos, devoluciones y más. Nuestro asistente IA está aquí para ayudarte 24/7.",
       ctaText: "Iniciar Conversación"
-    },
-
-    // Multilingual Support
-    multilingual: {
-      title: "Atención al Cliente Multilingüe",
-      subtitle: "Impulsado por Inteligencia Artificial",
-      description: "Nuestro servicio de atención al cliente habla perfectamente los 24 idiomas oficiales de la Unión Europea gracias a la inteligencia artificial. No importa dónde estés o qué idioma hables, estamos aquí para ayudarte.",
-      languages: "24 Idiomas de la UE",
-      availability: "Disponible 24/7",
-      ctaText: "Obtener Soporte"
     },
     
     // Contact

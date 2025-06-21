@@ -60,14 +60,6 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               {t.nav.reviews}
             </button>
             <button 
-              onClick={() => scrollToSection('multilingual')}
-              className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
-                isScrolled ? 'text-black' : 'text-white'
-              }`}
-            >
-              {t.nav.multilingual}
-            </button>
-            <button 
               onClick={() => scrollToSection('contact')}
               className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
                 isScrolled ? 'text-black' : 'text-white'
@@ -141,12 +133,6 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.reviews}
-              </button>
-              <button 
-                onClick={() => scrollToSection('multilingual')}
-                className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
-              >
-                {t.nav.multilingual}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}

@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Values from './components/Values';
 import Testimonials from './components/Testimonials';
 import AIAssistant from './components/AIAssistant';
-import MultilingualSupport from './components/MultilingualSupport';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { translations } from './data/translations';
@@ -52,8 +51,6 @@ function App() {
       <Testimonials t={t} />
       
       <AIAssistant t={t} />
-      
-      <MultilingualSupport t={t} />
       
       <Contact t={t} />
       

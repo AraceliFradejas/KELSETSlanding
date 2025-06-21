@@ -171,15 +171,30 @@ const AIAssistant = ({ t }) => {
 
             <div className="text-center scroll-animate">
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                {/* Bandera de la UE */}
+                <svg className="w-8 h-8" viewBox="0 0 24 16" fill="none">
+                  <rect width="24" height="16" fill="#003399"/>
+                  <g fill="#FFCC00">
+                    <circle cx="12" cy="3" r="0.8"/>
+                    <circle cx="15.5" cy="4" r="0.8"/>
+                    <circle cx="17.5" cy="6.5" r="0.8"/>
+                    <circle cx="17.5" cy="9.5" r="0.8"/>
+                    <circle cx="15.5" cy="12" r="0.8"/>
+                    <circle cx="12" cy="13" r="0.8"/>
+                    <circle cx="8.5" cy="12" r="0.8"/>
+                    <circle cx="6.5" cy="9.5" r="0.8"/>
+                    <circle cx="6.5" cy="6.5" r="0.8"/>
+                    <circle cx="8.5" cy="4" r="0.8"/>
+                    <circle cx="12" cy="6" r="0.8"/>
+                    <circle cx="12" cy="10" r="0.8"/>
+                  </g>
                 </svg>
               </div>
-              <h4 className="font-bold text-lg mb-2">{t.assistant.title === "Meet Our Smart Assistant" ? "Multilingual" : "Multiidioma"}</h4>
+              <h4 className="font-bold text-lg mb-2">{t.assistant.title === "Meet Our Smart Assistant" ? "European Union" : "Unión Europea"}</h4>
               <p className="text-gray-400">
                 {t.assistant.title === "Meet Our Smart Assistant" 
-                  ? "Supports English and Spanish"
-                  : "Soporta inglés y español"
+                  ? "We speak all European Union languages"
+                  : "Hablamos todos los idiomas de la Unión Europea"
                 }
               </p>
             </div>
