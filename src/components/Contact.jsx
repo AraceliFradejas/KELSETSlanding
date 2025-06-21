@@ -128,6 +128,17 @@ const Contact = ({ t }) => {
             {/* Contact Information */}
             <div className="scroll-animate">
               <div className="space-y-8">
+                {/* Profile Image */}
+                <div className="text-center mb-8">
+                  <img 
+                    src="/ARACEL_1.JPG" 
+                    alt="Araceli Fradejas" 
+                    className="w-32 h-32 object-cover rounded-full mx-auto shadow-lg border-4 border-gradient-to-r from-chiefs-red-500 to-lavender-400"
+                  />
+                  <h4 className="text-xl font-bold text-gray-900 mt-4">Araceli Fradejas</h4>
+                  <p className="text-chiefs-red-500 font-medium">Founder & CEO</p>
+                </div>
+
                 {/* Contact Info Cards */}
                 <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">

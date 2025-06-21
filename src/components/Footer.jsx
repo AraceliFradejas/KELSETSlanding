@@ -24,47 +24,15 @@ const Footer = ({ t }) => {
           
           {/* Links - Middle Column */}
           <div className="md:col-span-4">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8">
               <div>
                 <h4 className="text-lg font-semibold mb-5">{t.footer.links.company}</h4>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.about}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.careers}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.press}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-semibold mb-5">{t.footer.links.support}</h4>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.help}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.shipping}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-gray-300 hover:text-chiefs-red-500 transition-colors duration-300">
-                      {t.footer.links.returns}
-                    </a>
-                  </li>
-                </ul>
+                <p className="text-gray-300 text-sm">
+                  {t.footer.links.company === "Company" 
+                    ? "More sections coming soon..." 
+                    : "Más secciones próximamente..."
+                  }
+                </p>
               </div>
             </div>
           </div>
@@ -164,12 +132,12 @@ const Footer = ({ t }) => {
             </p>
             
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-chiefs-red-500 transition-colors duration-300">
+              <span className="text-gray-400">
                 {t.footer.links.privacy}
-              </a>
-              <a href="#" className="text-gray-400 hover:text-chiefs-red-500 transition-colors duration-300">
+              </span>
+              <span className="text-gray-400">
                 {t.footer.links.terms}
-              </a>
+              </span>
             </div>
           </div>
         </div>

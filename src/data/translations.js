@@ -51,25 +51,32 @@ export const translations = {
       subtitle: "Real stories from real people who trust KelceTS",
       items: [
         { 
-          name: "Emily Rodriguez", 
+          name: "Miguel Rodriguez", 
           role: "Marathon Runner",
           text: "These sneakers completely changed how I move every day. The technology is incredible and the comfort is unmatched.",
           rating: 5,
-          image: "/testimonial-1.jpg"
+          image: "/6.png"
         },
         { 
           name: "Carlos Martinez", 
           role: "Fashion Designer",
           text: "A perfect mix of tech and design. I'm absolutely obsessed with the style and innovation.",
           rating: 5,
-          image: "/testimonial-2.jpg"
+          image: "/7.png"
         },
         { 
-          name: "Jules Kim", 
+          name: "Sofia Chen", 
           role: "Tech Entrepreneur",
           text: "Stylish, smart and so comfortable. These shoes are the future. Love them!",
           rating: 5,
-          image: "/testimonial-3.jpg"
+          image: "/2.png"
+        },
+        { 
+          name: "Isabella Martinez", 
+          role: "Professional Athlete",
+          text: "Amazing performance and incredible design. KelceTS has created something truly special.",
+          rating: 5,
+          image: "/9.png"
         }
       ]
     },
@@ -193,25 +200,32 @@ export const translations = {
       subtitle: "Historias reales de personas reales que confían en KelceTS",
       items: [
         { 
-          name: "Lucía García", 
-          role: "Corredora de Maratón",
+          name: "Miguel García", 
+          role: "Corredor de Maratón",
           text: "Estas zapatillas cambiaron completamente mi forma de moverme cada día. La tecnología es increíble.",
           rating: 5,
-          image: "/testimonial-1.jpg"
+          image: "/6.png"
         },
         { 
-          name: "Pedro Sánchez", 
+          name: "Carlos Sánchez", 
           role: "Diseñador de Moda",
           text: "Una mezcla perfecta de tecnología y diseño. Estoy absolutamente obsesionado con el estilo.",
           rating: 5,
-          image: "/testimonial-2.jpg"
+          image: "/7.png"
         },
         { 
-          name: "Ana Torres", 
+          name: "Sofía Torres", 
           role: "Emprendedora Tech",
           text: "Estilo, inteligencia y comodidad. Estos zapatos son el futuro. ¡Me encantan!",
           rating: 5,
-          image: "/testimonial-3.jpg"
+          image: "/2.png"
+        },
+        { 
+          name: "Isabella Martínez", 
+          role: "Atleta Profesional",
+          text: "Rendimiento increíble y diseño espectacular. KelceTS ha creado algo realmente especial.",
+          rating: 5,
+          image: "/9.png"
         }
       ]
     },

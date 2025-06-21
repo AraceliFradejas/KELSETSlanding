@@ -78,18 +78,12 @@ const Testimonials = ({ t }) => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center scroll-animate">
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600">
             {t.testimonials.title === "What Our Community Says" 
               ? "Join thousands of satisfied customers who trust KelceTS"
               : "Únete a miles de clientes satisfechos que confían en KelceTS"
             }
           </p>
-          <button className="bg-gradient-to-r from-chiefs-red-500 to-lavender-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 btn-hover-effect">
-            {t.testimonials.title === "What Our Community Says" 
-              ? "Read More Reviews" 
-              : "Leer Más Reseñas"
-            }
-          </button>
         </div>
 
         {/* Trust Indicators */}
