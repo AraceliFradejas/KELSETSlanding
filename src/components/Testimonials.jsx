@@ -37,7 +37,7 @@ const Testimonials = ({ t }) => {
               <img 
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute top-0 left-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
                   e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=ff6b47&color=fff&size=500`;
                 }}
