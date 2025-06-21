@@ -30,30 +30,28 @@ const Values = ({ t }) => {
             return (
               <div 
                 key={index}
-                className="scroll-animate bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center group"
+                className="scroll-animate rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group overflow-hidden relative h-96 cursor-pointer"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                {/* Image instead of icon */}
-                <div className="value-icon group-hover:scale-110 transition-transform duration-300 mb-6">
-                  <img 
-                    src={imageSrc} 
-                    alt={value.title}
-                    className="w-20 h-20 object-cover rounded-full mx-auto shadow-lg"
-                  />
+                {/* Background Image */}
+                <img 
+                  src={imageSrc} 
+                  alt={value.title}
+                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+
+                {/* Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                  <h3 className="text-3xl font-bold mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-base opacity-95 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-chiefs-red-500 transition-colors duration-300">
-                  {value.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
-                  {value.description}
-                </p>
-
-                {/* Decorative element */}
-                <div className="mt-6 w-12 h-1 bg-gradient-to-r from-chiefs-red-400 to-chiefs-gold-400 rounded-full mx-auto group-hover:w-16 transition-all duration-300" />
               </div>
             );
           })}

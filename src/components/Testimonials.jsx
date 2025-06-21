@@ -26,51 +26,43 @@ const Testimonials = ({ t }) => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {t.testimonials.items.map((testimonial, index) => (
             <div 
               key={index}
-              className="testimonial-card scroll-animate"
+              className="scroll-animate rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group overflow-hidden relative h-[500px] cursor-pointer"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Profile Image */}
-              <div className="flex items-center mb-6">
-                <div className="relative">
-                  <img 
-                    src={testimonial.image || `/api/placeholder/80/80`}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-gray-100"
-                    onError={(e) => {
-                      e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=ff6b47&color=fff&size=80`;
-                    }}
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+              {/* Background Image */}
+              <img 
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&background=ff6b47&color=fff&size=500`;
+                }}
+              />
+              
+              {/* Overlay Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+              {/* Content */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                {/* Stars Rating */}
+                <div className="flex items-center mb-4">
+                  {renderStars(testimonial.rating)}
                 </div>
-                <div className="ml-4">
-                  <h4 className="font-bold text-lg text-gray-900">{testimonial.name}</h4>
-                  <p className="text-chiefs-red-500 font-medium">{testimonial.role}</p>
+
+                {/* Testimonial Text */}
+                <blockquote className="text-2xl font-light mb-6 leading-snug">
+                  <p>"{testimonial.text}"</p>
+                </blockquote>
+
+                {/* Author Info */}
+                <div className="mt-auto">
+                  <h4 className="font-bold text-xl">{testimonial.name}</h4>
+                  <p className="text-base opacity-80 font-medium">{testimonial.role}</p>
                 </div>
-              </div>
-
-              {/* Stars Rating */}
-              <div className="flex items-center mb-4">
-                {renderStars(testimonial.rating)}
-              </div>
-
-              {/* Testimonial Text */}
-              <blockquote className="text-gray-700 italic text-lg leading-relaxed mb-4">
-                "{testimonial.text}"
-              </blockquote>
-
-              {/* Quote Icon */}
-              <div className="flex justify-end">
-                <svg className="w-8 h-8 text-coral-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
               </div>
             </div>
           ))}
