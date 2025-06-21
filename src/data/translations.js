@@ -130,9 +130,11 @@ export const translations = {
       },
       social: {
         follow: "Follow Us",
-        twitter: "https://twitter.com/sosexpats_ai",
-        linkedin: "https://www.linkedin.com/in/araceli-fradejas/",
-        github: "https://github.com/AraceliFradejas"
+        twitter: "https://x.com/AraceliFradejas",
+        linkedin: "https://www.linkedin.com/in/araceli-fradejas-munoz-transformaciondigital/",
+        github: "https://github.com/AraceliFradejas",
+        youtube: "https://www.youtube.com/@aracelifradejasmunoz2758",
+        medium: "https://medium.com/@araceli.fradejas"
       },
       disclaimer: "KelceTS is a fictional project created for the Microsoft Power Up program's Conversational Agents module with Copilot Studio. This website demonstrates the integration of multilingual capabilities and AI assistants using Microsoft technologies. This is for educational purposes only and does not represent a real product or service.",
       copyright: "© 2025 KelceTS S.L. – Developed by Araceli Fradejas – All rights reserved."
@@ -270,9 +272,11 @@ export const translations = {
       },
       social: {
         follow: "Síguenos",
-        twitter: "https://twitter.com/sosexpats_ai",
-        linkedin: "https://www.linkedin.com/in/araceli-fradejas/",
-        github: "https://github.com/AraceliFradejas"
+        twitter: "https://x.com/AraceliFradejas",
+        linkedin: "https://www.linkedin.com/in/araceli-fradejas-munoz-transformaciondigital/",
+        github: "https://github.com/AraceliFradejas",
+        youtube: "https://www.youtube.com/@aracelifradejasmunoz2758",
+        medium: "https://medium.com/@araceli.fradejas"
       },
       disclaimer: "KelceTS es un proyecto ficticio creado para el módulo de Agentes Conversacionales con Copilot Studio del programa Microsoft Power Up. Este sitio web demuestra la integración de capacidades multilingües y asistentes de IA usando tecnologías Microsoft. Es solo con fines educativos y no representa un producto o servicio real.",
       copyright: "© 2025 KelceTS S.L. – Desarrollado por Araceli Fradejas – Todos los derechos reservados."
