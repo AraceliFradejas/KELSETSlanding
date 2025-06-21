@@ -106,7 +106,7 @@ export const translations = {
         error: "Error sending message. Please try again."
       },
       info: {
-        address: "123 Innovation Street, Tech Valley, CA 94025",
+        address: "KelceTS Ltd. 123 Oxford Street London, W1D 2JL United Kingdom",
         phone: "+1 (555) 123-KELCE",
         email: "hello@kelcets.com"
       }
@@ -248,7 +248,7 @@ export const translations = {
         error: "Error al enviar mensaje. Por favor intenta de nuevo."
       },
       info: {
-        address: "Calle Innovación 123, Valle Tech, Madrid 28001",
+        address: "KelceTS Ltd. 123 Oxford Street London, W1D 2JL United Kingdom",
         phone: "+34 (91) 123-KELCE",
         email: "hola@kelcets.com"
       }
