@@ -5,7 +5,8 @@ export const translations = {
       home: "Home",
       values: "Values",
       reviews: "Reviews",
-      contact: "Contact"
+      contact: "Contact",
+      tailor: "Ask tAilor"
     },
     
     // Hero section
@@ -143,7 +144,8 @@ export const translations = {
       home: "Inicio",
       values: "Valores",
       reviews: "Reseñas",
-      contact: "Contacto"
+      contact: "Contacto",
+      tailor: "Pregunta a tAilor"
     },
     
     // Hero section

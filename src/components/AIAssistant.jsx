@@ -4,7 +4,7 @@ const AIAssistant = ({ t }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+    <section id="ai-assistant" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-chiefs-red-500/10 rounded-full blur-3xl" />

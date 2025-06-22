@@ -68,6 +68,19 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               {t.nav.contact}
             </button>
 
+            {/* tAilor Assistant Button */}
+            <button 
+              onClick={() => scrollToSection('ai-assistant')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-chiefs-red-500 to-lavender-400 text-white font-semibold text-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+              style={{fontFamily: 'Georgia, Times, serif'}}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              <span>{t.nav.tailor}</span>
+              <span>🎵</span>
+            </button>
+
             {/* Language Switcher */}
             <div className="flex items-center space-x-2 ml-4">
               <button 
@@ -139,6 +152,19 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.contact}
+              </button>
+
+              {/* Mobile tAilor Button */}
+              <button 
+                onClick={() => scrollToSection('ai-assistant')}
+                className="flex items-center space-x-2 px-4 py-3 rounded-full bg-gradient-to-r from-chiefs-red-500 to-lavender-400 text-white font-semibold text-sm hover:shadow-lg transition-all duration-300 w-fit"
+                style={{fontFamily: 'Georgia, Times, serif'}}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span>{t.nav.tailor}</span>
+                <span>🎵</span>
               </button>
               
               {/* Mobile Language Switcher */}
