@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = ({ t }) => {
   const videoRef = useRef(null);
@@ -98,12 +99,12 @@ const Hero = ({ t }) => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a 
-                  href="/our-story.html"
+                <Link 
+                  to="/our-story"
                   className="btn-hover-effect bg-white text-chiefs-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 text-center inline-block"
                 >
                   {t.hero.cta}
-                </a>
+                </Link>
                 
                 <button 
                   onClick={() => scrollToSection('testimonials')}

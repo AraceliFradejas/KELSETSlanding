@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SocialMediaWidget from './components/SocialMediaWidget';
@@ -7,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import AIAssistant from './components/AIAssistant';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import OurStory from './components/OurStory';
 import { translations } from './data/translations';
 
 function App() {
@@ -36,29 +38,36 @@ function App() {
 
   const t = translations[language];
 
-  return (
-    <div className="font-sans bg-white text-black overflow-x-hidden">
-      <Header 
-        language={language} 
-        setLanguage={setLanguage} 
-        isScrolled={isScrolled}
-        t={t}
-      />
-      
-      <SocialMediaWidget t={t} />
-      
+  const HomePage = () => (
+    <>
       <Hero t={t} />
-      
       <Values t={t} />
-      
       <Testimonials t={t} />
-      
       <AIAssistant t={t} />
-      
       <Contact t={t} />
-      
-      <Footer t={t} />
-    </div>
+    </>
+  );
+
+  return (
+    <Router>
+      <div className="font-sans bg-white text-black overflow-x-hidden">
+        <Header 
+          language={language} 
+          setLanguage={setLanguage} 
+          isScrolled={isScrolled}
+          t={t}
+        />
+        
+        <SocialMediaWidget t={t} />
+        
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/our-story" element={<OurStory language={language} />} />
+        </Routes>
+        
+        <Footer t={t} />
+      </div>
+    </Router>
   );
 }
 
