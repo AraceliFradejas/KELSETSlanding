@@ -103,9 +103,9 @@ export const translations = {
         error: "Error sending message. Please try again."
       },
       info: {
-        address: "KelceTS Ltd. 123 Oxford Street London, W1D 2JL United Kingdom",
-        phone: "+1 (555) 123-KELCE",
-        email: "hello@kelcets.com"
+        address: "Madrid, España",
+        phone: "+34 (600) 000-000",
+        email: "araceli.fradejas@gmail.com"
       }
     },
     
@@ -242,9 +242,9 @@ export const translations = {
         error: "Error al enviar mensaje. Por favor intenta de nuevo."
       },
       info: {
-        address: "KelceTS Ltd. 123 Oxford Street London, W1D 2JL United Kingdom",
-        phone: "+34 (91) 123-KELCE",
-        email: "hola@kelcets.com"
+        address: "Madrid, España",
+        phone: "+34 (600) 000-000",
+        email: "araceli.fradejas@gmail.com"
       }
     },
     
