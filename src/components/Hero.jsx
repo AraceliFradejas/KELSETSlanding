@@ -98,12 +98,12 @@ const Hero = ({ t }) => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button 
-                  onClick={() => scrollToSection('values')}
-                  className="btn-hover-effect bg-white text-chiefs-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+                <a 
+                  href="/our-story.html"
+                  className="btn-hover-effect bg-white text-chiefs-red-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 text-center inline-block"
                 >
                   {t.hero.cta}
-                </button>
+                </a>
                 
                 <button 
                   onClick={() => scrollToSection('testimonials')}
