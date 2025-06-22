@@ -252,6 +252,12 @@ const OurStory = ({ language = 'en' }) => {
       <section className="py-16 text-center">
         <Link 
           to="/" 
+          onClick={() => {
+            // Scroll to top when navigating to home
+            setTimeout(() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 100);
+          }}
           className="inline-flex items-center space-x-2 text-lg underline hover:text-chiefs-red-500 transition-colors"
         >
           <span>{t.backLink}</span>

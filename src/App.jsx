@@ -9,6 +9,7 @@ import AIAssistant from './components/AIAssistant';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import OurStory from './components/OurStory';
+import ScrollToTop from './components/ScrollToTop';
 import { translations } from './data/translations';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="font-sans bg-white text-black overflow-x-hidden">
         <Header 
           language={language} 
