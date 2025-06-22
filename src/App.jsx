@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import SocialMediaWidget from './components/SocialMediaWidget';
 import Values from './components/Values';
 import Testimonials from './components/Testimonials';
 import AIAssistant from './components/AIAssistant';
@@ -43,6 +44,8 @@ function App() {
         isScrolled={isScrolled}
         t={t}
       />
+      
+      <SocialMediaWidget t={t} />
       
       <Hero t={t} />
       
