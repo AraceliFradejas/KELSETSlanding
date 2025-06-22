@@ -96,29 +96,17 @@ const AIAssistant = ({ t }) => {
             </div>
 
             {/* Microsoft Copilot Studio Embed */}
-            <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="border-t border-white/20 pt-6">
-                {/* Placeholder for the actual Microsoft Copilot Studio iframe */}
-                <div className="bg-white/5 rounded-2xl p-6 text-center border-2 border-dashed border-white/20">
-                  <svg className="w-12 h-12 text-white/40 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                  <p className="text-white/60 mb-4">
-                    {t.assistant.title === "Meet Our Smart Assistant" 
-                      ? "Microsoft Copilot Studio integration will be embedded here"
-                      : "La integración de Microsoft Copilot Studio se incrustará aquí"
-                    }
-                  </p>
-                  {/* 
-                  Uncomment this when you have the actual iframe URL from Microsoft Copilot Studio:
-                  
+                {/* Microsoft Copilot Studio iframe integration */}
+                <div className="bg-white/5 rounded-2xl p-2 border border-white/20">
                   <iframe 
-                    src="https://copilotstudio.microsoft.com/embed/your-agent-id" 
-                    className="w-full h-80 rounded-xl border-0" 
+                    src="https://copilotstudio.microsoft.com/environments/Default-22426826-dc4c-401a-8d0e-7f97e64c0f99/bots/cr3d7_tAilorKelceTsAiAssistant_-3fN0x/webchat?__version__=2" 
+                    className="w-full h-96 rounded-xl border-0" 
                     title="KelceTS Assistant"
                     allow="microphone"
+                    style={{ minHeight: '400px' }}
                   />
-                  */}
                 </div>
               </div>
             </div>
