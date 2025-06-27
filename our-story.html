@@ -51,12 +51,12 @@
 <body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
     <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
-        <nav class="container mx-auto px-4 py-4">
+        <nav class="container mx-auto px-4 py-3 sm:py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <img src="/KelceTS_logo.png" alt="KelceTS" class="h-10 w-auto">
-                    <span class="text-xl font-bold bg-gradient-to-r from-chiefs-red-500 to-lavender-400 bg-clip-text text-transparent">KelceTS</span>
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <img src="/KelceTS_logo.png" alt="KelceTS" class="h-8 sm:h-10 w-auto">
+                    <span class="text-lg sm:text-xl font-bold bg-gradient-to-r from-chiefs-red-500 to-lavender-400 bg-clip-text text-transparent">KelceTS</span>
                 </div>
                 
                 <!-- Navigation -->
@@ -68,63 +68,63 @@
                 </div>
 
                 <!-- Language Selector -->
-                <div class="flex items-center space-x-4">
-                    <button onclick="switchLanguage('en')" class="px-3 py-1 rounded-full bg-chiefs-red-500 text-white text-sm" id="btn-en">EN</button>
-                    <button onclick="switchLanguage('es')" class="px-3 py-1 rounded-full bg-white/20 text-white text-sm" id="btn-es">ES</button>
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <button onclick="switchLanguage('en')" class="px-2 sm:px-3 py-1 rounded-full bg-chiefs-red-500 text-white text-xs sm:text-sm" id="btn-en">EN</button>
+                    <button onclick="switchLanguage('es')" class="px-2 sm:px-3 py-1 rounded-full bg-white/20 text-white text-xs sm:text-sm" id="btn-es">ES</button>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main class="pt-20">
+    <main class="pt-16 sm:pt-20">
         <!-- Hero Section with Carousel -->
-        <section class="py-20 px-4">
+        <section class="py-12 sm:py-16 lg:py-20 px-4">
             <div class="container mx-auto max-w-6xl">
-                <div class="text-center space-y-8 scroll-animate">
-                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-8" id="hero-title">
+                <div class="text-center space-y-6 sm:space-y-8 scroll-animate">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 sm:mb-8" id="hero-title">
                         Our Story
                     </h1>
                     
                     <!-- Taylor Swift Carousel -->
                     <div class="max-w-4xl mx-auto mb-8">
-                        <div class="carousel-container h-80 md:h-96">
+                        <div class="carousel-container h-64 sm:h-80 md:h-96 lg:h-[28rem]">
                             <div class="carousel-track" id="carousel-track">
                                 <div class="carousel-slide">
-                                    <img src="/taylor0.jpg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover">
+                                    <img src="/taylor0.jpg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover object-center">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="/taylor1.avif" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover">
+                                    <img src="/taylor1.avif" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover object-center">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="/taylor2.jpeg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover">
+                                    <img src="/taylor2.jpeg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover object-center">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="/taylor3.jpg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover">
+                                    <img src="/taylor3.jpg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover object-center">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="/taylor4.jpeg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover">
+                                    <img src="/taylor4.jpeg" alt="Taylor Swift Eras Tour" class="w-full h-full object-cover object-center">
                                 </div>
                             </div>
                             <!-- Carousel Controls -->
-                            <button onclick="prevSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full">
+                            <button onclick="prevSlide()" class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200">
                                 &#8249;
                             </button>
-                            <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full">
+                            <button onclick="nextSlide()" class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200">
                                 &#8250;
                             </button>
                             <!-- Indicators -->
-                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                                <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator active"></button>
-                                <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator"></button>
-                                <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator"></button>
-                                <button onclick="goToSlide(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator"></button>
-                                <button onclick="goToSlide(4)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator"></button>
+                            <div class="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                                <button onclick="goToSlide(0)" class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator active transition-all duration-200"></button>
+                                <button onclick="goToSlide(1)" class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator transition-all duration-200"></button>
+                                <button onclick="goToSlide(2)" class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator transition-all duration-200"></button>
+                                <button onclick="goToSlide(3)" class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator transition-all duration-200"></button>
+                                <button onclick="goToSlide(4)" class="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white carousel-indicator transition-all duration-200"></button>
                             </div>
                         </div>
                     </div>
 
-                    <p class="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed" id="hero-description">
+                    <p class="max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed px-4" id="hero-description">
                         Everything started with an <span class="font-semibold italic">"It's me, hi"</span> very <span class="text-pink-500 font-semibold">Swiftie</span> in 2023, the year my brother Diego and I were amazed at the cinema in Príncipe Pío, on October 13, 2023, in a packed theater watching <span class="font-semibold">The Eras Tour</span> movie. We thought that was as close as we'd get to that spectacle, and that's when we both became Swifties.
                     </p>
                 </div>
@@ -132,18 +132,18 @@
         </section>
 
         <!-- Timeline -->
-        <section class="py-16 px-4">
-            <div class="container mx-auto max-w-6xl space-y-20">
+        <section class="py-12 sm:py-16 px-4">
+            <div class="container mx-auto max-w-6xl space-y-12 sm:space-y-16 lg:space-y-20">
                 
                 <!-- May 2024 Story -->
                 <div class="grid md:grid-cols-3 gap-8 items-center scroll-animate">
                     <div class="md:col-span-1">
-                        <img src="/kelce1.avif" alt="KelceTS Birth Moment" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+                        <img src="/kelce1.avif" alt="KelceTS Birth Moment" class="w-full h-64 sm:h-72 md:h-80 object-cover object-center rounded-2xl shadow-lg">
                     </div>
-                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4" id="may-title">May 2024 — "We hit the nail"</h2>
-                        <p class="text-gray-300 leading-relaxed" id="may-description">
-                            I had given up all hope. I didn't have a ticket and a magic Ticketmaster code arrived the same morning of the first concert, <strong>May 29, 2024</strong>. But I didn't see it until 4 PM, just as I was heading to my Generative AI class.
+                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4" id="may-title">May 2024 — "We hit the nail"</h2>
+                        <p class="text-gray-300 leading-relaxed text-sm sm:text-base" id="may-description">
+                            I had given up all hope. I didn't have a ticket and a magic Ticketmaster code arrived the same morning of the first concert, <strong>May 29, 2024</strong>. But I didn't see it until 4 PM, just as I was heading to my Generative AI class.<br><br>
                             I desperately wanted to buy it, but my brother, more pragmatic than a bridge in <span class="italic">Cruel Summer</span>, reminded me that getting to the Bernabéu at the last second was impossible. That "no" became the biggest <span class="italic">Plot Twist</span> of my life: the spark of <span class="font-semibold">KelceTS</span> was born.
                         </p>
                     </div>
@@ -152,22 +152,22 @@
                 <!-- AI Class -->
                 <div class="grid md:grid-cols-3 gap-8 items-center scroll-animate">
                     <div class="md:col-span-1">
-                        <img src="/ARACEL_1.JPG" alt="AI Generative Class at Universidad Pontificia Comillas" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+                        <img src="/ARACEL_1.JPG" alt="AI Generative Class at Universidad Pontificia Comillas" class="w-full h-64 sm:h-72 md:h-80 object-cover object-center rounded-2xl shadow-lg">
                     </div>
-                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4" id="ai-class-title">Generative AI Class — "You belong with AI"</h2>
-                        <p class="text-gray-300 leading-relaxed" id="ai-class-description">
-                            That same afternoon I attended the course "Applications of Generative Artificial Intelligence" at Universidad Pontificia Comillas ICAI-ICADE.
+                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4" id="ai-class-title">Generative AI Class — "You belong with AI"</h2>
+                        <p class="text-gray-300 leading-relaxed text-sm sm:text-base" id="ai-class-description">
+                            That same afternoon I attended the course "Applications of Generative Artificial Intelligence" at Universidad Pontificia Comillas ICAI-ICADE.<br><br>
                             The practice consisted of creating an agent with ChatGPT for a European sneaker startup. In my head, the pieces fit together with a crash worthy of <span class="italic">Style</span>. What if we mixed fashion, sports, and the epic <span class="italic">Swiftie</span> narrative? Thus <span class="font-semibold">KelceTS</span> was born, uniting the passion of <span class="font-semibold">Travis Kelce</span> and the storytelling of <span class="font-semibold">Taylor Swift</span>.
                         </p>
                     </div>
                 </div>
 
                 <!-- 2025 Growth -->
-                <div class="grid md:grid-cols-3 gap-8 items-center scroll-animate">
+                <div class="grid md:grid-cols-3 gap-8 items-start scroll-animate">
                     <div class="md:col-span-1 space-y-4">
                         <!-- YouTube Video 1 -->
-                        <div class="aspect-video rounded-lg overflow-hidden">
+                        <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
                             <iframe 
                                 src="https://www.youtube.com/embed/W2kK3otzWX0" 
                                 title="Kaggle Competition Video"
@@ -178,7 +178,7 @@
                             </iframe>
                         </div>
                         <!-- YouTube Video 2 -->
-                        <div class="aspect-video rounded-lg overflow-hidden">
+                        <div class="aspect-video rounded-lg overflow-hidden shadow-lg">
                             <iframe 
                                 src="https://www.youtube.com/embed/8oreCBeRBVs" 
                                 title="Capstone Project Video"
@@ -189,9 +189,9 @@
                             </iframe>
                         </div>
                     </div>
-                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4" id="growth-title">2025 — Prompts, Python, Power Ups... a <span class="italic">Love Story</span> with AI</h2>
-                        <div class="space-y-4 text-gray-300 leading-relaxed" id="growth-description">
+                    <div class="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4" id="growth-title">2025 — Prompts, Python, Power Ups... a <span class="italic">Love Story</span> with AI</h2>
+                        <div class="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base" id="growth-description">
                             <p>
                                 Since that initial spark, KelceTS became my project laboratory: from <a class="underline hover:text-chiefs-red-500" href="https://medium.com/@araceli.fradejas/how-i-built-an-ai-assistant-to-analyze-customer-complaints-for-kelcets-s-l-93dbc59601d1" target="_blank" rel="noopener noreferrer">analyzing complaints with AI</a> to creating a multilingual <span class="italic">customer experience</span> system.
                             </p>
@@ -215,8 +215,8 @@
         </section>
 
         <!-- Footer Link -->
-        <section class="py-16 text-center">
-            <a href="/index.html" class="inline-flex items-center space-x-2 text-lg underline hover:text-chiefs-red-500 transition-colors" id="back-link">
+        <section class="py-12 sm:py-16 text-center px-4">
+            <a href="/index.html" class="inline-flex items-center space-x-2 text-base sm:text-lg underline hover:text-chiefs-red-500 transition-colors" id="back-link">
                 <span>«Back to December» (back to home)</span>
             </a>
         </section>

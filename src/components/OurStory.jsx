@@ -98,16 +98,16 @@ const OurStory = ({ language = 'en' }) => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
       {/* Hero Section with Carousel */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-8 scroll-animate opacity-0 translate-y-8 transition-all duration-600">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
+          <div className="text-center space-y-6 sm:space-y-8 scroll-animate opacity-0 translate-y-8 transition-all duration-600">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 sm:mb-8">
               {t.title}
             </h1>
             
             {/* Taylor Swift Carousel */}
             <div className="max-w-4xl mx-auto mb-8">
-              <div className="relative h-80 md:h-96 overflow-hidden rounded-2xl">
+              <div className="relative h-64 sm:h-80 md:h-96 lg:h-[28rem] overflow-hidden rounded-2xl">
                 <div 
                   className="flex transition-transform duration-500 ease-in-out h-full"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -117,7 +117,7 @@ const OurStory = ({ language = 'en' }) => {
                       <img 
                         src={image} 
                         alt={`Taylor Swift Eras Tour ${index + 1}`} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                       />
                     </div>
                   ))}
@@ -126,24 +126,24 @@ const OurStory = ({ language = 'en' }) => {
                 {/* Carousel Controls */}
                 <button 
                   onClick={prevSlide}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                  className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
                 >
                   &#8249;
                 </button>
                 <button 
                   onClick={nextSlide}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                  className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
                 >
                   &#8250;
                 </button>
                 
                 {/* Indicators */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {Array.from({ length: totalSlides }).map((_, index) => (
                     <button
                       key={index}
                       onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
                         index === currentSlide ? 'bg-white' : 'bg-white/50 hover:bg-white/80'
                       }`}
                     />
@@ -153,7 +153,7 @@ const OurStory = ({ language = 'en' }) => {
             </div>
 
             <p 
-              className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed"
+              className="max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed px-4"
               dangerouslySetInnerHTML={{ __html: t.heroDescription }}
             />
           </div>
@@ -161,8 +161,8 @@ const OurStory = ({ language = 'en' }) => {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl space-y-20">
+      <section className="py-12 sm:py-16 px-4">
+        <div className="container mx-auto max-w-6xl space-y-12 sm:space-y-16 lg:space-y-20">
           
           {/* May 2024 Story */}
           <div className="grid md:grid-cols-3 gap-8 items-center scroll-animate opacity-0 translate-y-8 transition-all duration-600">
@@ -170,16 +170,16 @@ const OurStory = ({ language = 'en' }) => {
               <img 
                 src="/kelce1.avif" 
                 alt="KelceTS Birth Moment" 
-                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                className="w-full h-64 sm:h-72 md:h-80 object-cover object-center rounded-2xl shadow-lg"
               />
             </div>
-            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
               <h2 
-                className="text-2xl md:text-3xl font-bold mb-4"
+                className="text-xl sm:text-2xl md:text-3xl font-bold mb-4"
                 dangerouslySetInnerHTML={{ __html: t.mayTitle }}
               />
               <p 
-                className="text-gray-300 leading-relaxed"
+                className="text-gray-300 leading-relaxed text-sm sm:text-base"
                 dangerouslySetInnerHTML={{ __html: t.mayDescription }}
               />
             </div>
@@ -191,26 +191,26 @@ const OurStory = ({ language = 'en' }) => {
               <img 
                 src="/ARACEL_1.JPG" 
                 alt="AI Generative Class at Universidad Pontificia Comillas" 
-                className="w-full h-80 object-cover rounded-2xl shadow-lg"
+                className="w-full h-64 sm:h-72 md:h-80 object-cover object-center rounded-2xl shadow-lg"
               />
             </div>
-            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
               <h2 
-                className="text-2xl md:text-3xl font-bold mb-4"
+                className="text-xl sm:text-2xl md:text-3xl font-bold mb-4"
                 dangerouslySetInnerHTML={{ __html: t.aiClassTitle }}
               />
               <p 
-                className="text-gray-300 leading-relaxed"
+                className="text-gray-300 leading-relaxed text-sm sm:text-base"
                 dangerouslySetInnerHTML={{ __html: t.aiClassDescription }}
               />
             </div>
           </div>
 
           {/* 2025 Growth */}
-          <div className="grid md:grid-cols-3 gap-8 items-center scroll-animate opacity-0 translate-y-8 transition-all duration-600">
+          <div className="grid md:grid-cols-3 gap-8 items-start scroll-animate opacity-0 translate-y-8 transition-all duration-600">
             <div className="md:col-span-1 space-y-4">
               {/* YouTube Video 1 */}
-              <div className="aspect-video rounded-lg overflow-hidden">
+              <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe 
                   src="https://www.youtube.com/embed/W2kK3otzWX0" 
                   title="Kaggle Competition Video"
@@ -221,7 +221,7 @@ const OurStory = ({ language = 'en' }) => {
                 />
               </div>
               {/* YouTube Video 2 */}
-              <div className="aspect-video rounded-lg overflow-hidden">
+              <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe 
                   src="https://www.youtube.com/embed/8oreCBeRBVs" 
                   title="Capstone Project Video"
@@ -232,13 +232,13 @@ const OurStory = ({ language = 'en' }) => {
                 />
               </div>
             </div>
-            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+            <div className="md:col-span-2 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20">
               <h2 
-                className="text-2xl md:text-3xl font-bold mb-4"
+                className="text-xl sm:text-2xl md:text-3xl font-bold mb-4"
                 dangerouslySetInnerHTML={{ __html: t.growthTitle }}
               />
               <div 
-                className="space-y-4 text-gray-300 leading-relaxed"
+                className="space-y-4 text-gray-300 leading-relaxed text-sm sm:text-base"
                 dangerouslySetInnerHTML={{ 
                   __html: language === 'en' ? growthDescriptionEN : growthDescriptionES 
                 }}
@@ -249,7 +249,7 @@ const OurStory = ({ language = 'en' }) => {
       </section>
 
       {/* Footer Link */}
-      <section className="py-16 text-center">
+      <section className="py-12 sm:py-16 text-center px-4">
         <Link 
           to="/" 
           onClick={() => {
@@ -258,7 +258,7 @@ const OurStory = ({ language = 'en' }) => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }, 100);
           }}
-          className="inline-flex items-center space-x-2 text-lg underline hover:text-chiefs-red-500 transition-colors"
+          className="inline-flex items-center space-x-2 text-base sm:text-lg underline hover:text-chiefs-red-500 transition-colors"
         >
           <span>{t.backLink}</span>
         </Link>
