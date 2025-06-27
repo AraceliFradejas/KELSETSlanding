@@ -3,10 +3,11 @@ export const translations = {
     // Navigation
     nav: {
       home: "Home",
-      values: "Values",
+      values: "Values", 
       reviews: "Reviews",
       contact: "Contact",
-      tailor: "Ask tAilor"
+      tailor: "Ask tAilor",
+      careers: "Careers"
     },
     
     // Hero section
@@ -108,6 +109,31 @@ export const translations = {
         email: "araceli.fradejas@gmail.com"
       }
     },
+
+    // Careers Promo
+    careersPromo: {
+      title: "Join the Movement",
+      subtitle: "We're not just creating sneakers, we're designing the future of style, technology, and culture. Ready to walk into your era?",
+      highlights: [
+        {
+          icon: "🚀",
+          title: "Innovation First",
+          description: "Work with cutting-edge AI and design technologies"
+        },
+        {
+          icon: "✨",
+          title: "Creative Freedom",
+          description: "Express your unique vision in everything you create"
+        },
+        {
+          icon: "🌍",
+          title: "Global Impact",
+          description: "Shape how people move and feel around the world"
+        }
+      ],
+      joinBtn: "🎟️ Join Our Team",
+      learnMoreBtn: "💬 Learn More"
+    },
     
     // Footer
     footer: {
@@ -143,9 +169,10 @@ export const translations = {
     nav: {
       home: "Inicio",
       values: "Valores",
-      reviews: "Reseñas",
+      reviews: "Reseñas", 
       contact: "Contacto",
-      tailor: "Pregunta a tAilor"
+      tailor: "Pregunta a tAilor",
+      careers: "Carreras"
     },
     
     // Hero section
@@ -246,6 +273,31 @@ export const translations = {
         phone: "+34 (600) 000-000",
         email: "araceli.fradejas@gmail.com"
       }
+    },
+
+    // Careers Promo 
+    careersPromo: {
+      title: "Únete al Movimiento",
+      subtitle: "No solo creamos zapatillas, diseñamos el futuro del estilo, la tecnología y la cultura. ¿Lista para caminar hacia tu era?",
+      highlights: [
+        {
+          icon: "🚀",
+          title: "Innovación Primero",
+          description: "Trabaja con IA de vanguardia y tecnologías de diseño"
+        },
+        {
+          icon: "✨", 
+          title: "Libertad Creativa",
+          description: "Expresa tu visión única en todo lo que creas"
+        },
+        {
+          icon: "🌍",
+          title: "Impacto Global", 
+          description: "Influye en cómo la gente se mueve y se siente en el mundo"
+        }
+      ],
+      joinBtn: "🎟️ Únete a Nuestro Equipo",
+      learnMoreBtn: "💬 Saber Más"
     },
     
     // Footer

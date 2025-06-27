@@ -9,6 +9,8 @@ import AIAssistant from './components/AIAssistant';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import OurStory from './components/OurStory';
+import Careers from './components/Careers';
+import CareersPromo from './components/CareersPromo';
 import ScrollToTop from './components/ScrollToTop';
 import { translations } from './data/translations';
 
@@ -44,6 +46,7 @@ function App() {
       <Hero t={t} />
       <Values t={t} />
       <Testimonials t={t} />
+      <CareersPromo language={language} translations={translations} />
       <AIAssistant t={t} />
       <Contact t={t} />
     </>
@@ -65,6 +68,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/our-story" element={<OurStory language={language} />} />
+          <Route path="/careers" element={<Careers language={language} />} />
         </Routes>
         
         <Footer t={t} />

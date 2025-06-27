@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({ language, setLanguage, isScrolled, t }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,6 +68,14 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
             >
               {t.nav.contact}
             </button>
+            <Link
+              to="/careers"
+              className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
+                isScrolled ? 'text-black' : 'text-white'
+              }`}
+            >
+              {t.nav.careers}
+            </Link>
 
             {/* tAilor Assistant Button */}
             <button 
@@ -153,6 +162,13 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               >
                 {t.nav.contact}
               </button>
+              <Link
+                to="/careers"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
+              >
+                {t.nav.careers}
+              </Link>
 
               {/* Mobile tAilor Button */}
               <button 
