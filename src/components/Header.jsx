@@ -1,16 +1,39 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = ({ language, setLanguage, isScrolled, t }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+  // Función mejorada para scroll y navegación cross-page
+  const handleNavScroll = (sectionId) => {
+    if (location.pathname !== '/') {
+      // Si no estamos en la home, navegar a home y luego hacer scroll
+      navigate('/');
+      // Guardar el sectionId en localStorage para que sea accesible después de la navegación
+      sessionStorage.setItem('scrollToSection', sectionId);
+    } else {
+      // Si ya estamos en la home, solo hacer scroll
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
   };
+
+  // Efecto para manejar el scroll después de la navegación
+  useEffect(() => {
+    if (location.pathname === '/') {
+      const sectionToScroll = sessionStorage.getItem('scrollToSection');
+      if (sectionToScroll) {
+        setTimeout(() => {
+          const el = document.getElementById(sectionToScroll);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+          sessionStorage.removeItem('scrollToSection');
+        }, 500); // Dar tiempo suficiente para que la página se renderice
+      }
+    }
+  }, [location.pathname]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -21,7 +44,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src="./KelceTS_logo.png" 
               alt="KelceTS Logo" 
@@ -32,12 +55,12 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
             }`}>
               KelceTS
             </h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNavScroll('home')}
               className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}
@@ -45,7 +68,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               {t.nav.home}
             </button>
             <button 
-              onClick={() => scrollToSection('values')}
+              onClick={() => handleNavScroll('values')}
               className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}
@@ -53,7 +76,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               {t.nav.values}
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')}
+              onClick={() => handleNavScroll('testimonials')}
               className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}
@@ -61,7 +84,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
               {t.nav.reviews}
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavScroll('contact')}
               className={`font-medium transition-colors duration-300 hover:text-chiefs-red-400 ${
                 isScrolled ? 'text-black' : 'text-white'
               }`}
@@ -79,7 +102,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
 
             {/* tAilor Assistant Button */}
             <button 
-              onClick={() => scrollToSection('ai-assistant')}
+              onClick={() => handleNavScroll('ai-assistant')}
               className={`flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-chiefs-red-500 to-lavender-400 text-white font-semibold text-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
               style={{fontFamily: 'Georgia, Times, serif'}}
             >
@@ -139,25 +162,25 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
             <nav className="flex flex-col p-4 space-y-4">
               <button 
-                onClick={() => scrollToSection('home')}
+                onClick={() => handleNavScroll('home')}
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.home}
               </button>
               <button 
-                onClick={() => scrollToSection('values')}
+                onClick={() => handleNavScroll('values')}
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.values}
               </button>
               <button 
-                onClick={() => scrollToSection('testimonials')}
+                onClick={() => handleNavScroll('testimonials')}
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.reviews}
               </button>
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleNavScroll('contact')}
                 className="text-left text-black font-medium hover:text-chiefs-red-400 transition-colors duration-300"
               >
                 {t.nav.contact}
@@ -172,7 +195,7 @@ const Header = ({ language, setLanguage, isScrolled, t }) => {
 
               {/* Mobile tAilor Button */}
               <button 
-                onClick={() => scrollToSection('ai-assistant')}
+                onClick={() => handleNavScroll('ai-assistant')}
                 className="flex items-center space-x-2 px-4 py-3 rounded-full bg-gradient-to-r from-chiefs-red-500 to-lavender-400 text-white font-semibold text-sm hover:shadow-lg transition-all duration-300 w-fit"
                 style={{fontFamily: 'Georgia, Times, serif'}}
               >
