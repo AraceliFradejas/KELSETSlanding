@@ -111,7 +111,7 @@ const Careers = ({ language = 'en' }) => {
         {/* Hero Image Background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="./hero_carreer.png" 
+            src="https://kelset-slanding.vercel.app/hero_carreer.png" 
             alt="Career Hero" 
             className="w-full h-full object-cover opacity-30 object-center"
           />
@@ -151,7 +151,7 @@ const Careers = ({ language = 'en' }) => {
             
             <div className="order-first md:order-last">
               <img 
-                src="./1%20carreer.png" 
+                src="https://kelset-slanding.vercel.app/1%20carreer.png" 
                 alt="Lover Era at KelceTS" 
                 className="w-full h-auto rounded-2xl shadow-2xl border-2 border-chiefs-red-500/30"
               />
@@ -166,7 +166,7 @@ const Careers = ({ language = 'en' }) => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="order-last md:order-first">
               <img 
-                src="./2%20carreer.png" 
+                src="https://kelset-slanding.vercel.app/2%20carreer.png" 
                 alt="Join our team" 
                 className="w-full h-auto rounded-2xl shadow-2xl border-2 border-lavender-500/30"
               />
@@ -235,7 +235,7 @@ const Careers = ({ language = 'en' }) => {
             
             <div className="order-first md:order-last">
               <img 
-                src="./3%20carreer.png" 
+                src="https://kelset-slanding.vercel.app/3%20carreer.png" 
                 alt="KelceTS Onboarding Experience" 
                 className="w-full h-auto rounded-2xl shadow-2xl border-2 border-chiefs-red-500/30 rotate-3 hover:rotate-0 transition-transform duration-500"
               />
