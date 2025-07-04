@@ -107,8 +107,18 @@ const Careers = ({ language = 'en' }) => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
       {/* Hero Header */}
-      <header className="bg-gradient-to-r from-chiefs-red-500 to-lavender-500 text-white py-16 sm:py-20 lg:py-24 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
+      <header className="relative bg-gradient-to-r from-chiefs-red-500 to-lavender-500 text-white py-16 sm:py-20 lg:py-24 px-4">
+        {/* Hero Image Background */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img 
+            src="/hero_carreer.png" 
+            alt="Career Hero" 
+            className="w-full h-full object-cover opacity-30 object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-chiefs-red-500/80 to-lavender-500/80"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight">
             {t.title}
           </h1>
@@ -121,53 +131,77 @@ const Careers = ({ language = 'en' }) => {
       {/* Lover Era Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
-            {t.loverEraTitle}
-          </h2>
-          <div 
-            className="text-base sm:text-lg leading-relaxed mb-8 text-gray-300"
-            dangerouslySetInnerHTML={{ __html: t.loverEraDescription }}
-          />
-          <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg">
-            {t.values.map((value, index) => (
-              <li key={index} className="flex items-center space-x-3">
-                <span className="text-lavender-400">{value}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
+                {t.loverEraTitle}
+              </h2>
+              <div 
+                className="text-base sm:text-lg leading-relaxed mb-8 text-gray-300"
+                dangerouslySetInnerHTML={{ __html: t.loverEraDescription }}
+              />
+              <ul className="space-y-3 sm:space-y-4 text-base sm:text-lg">
+                {t.values.map((value, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <span className="text-lavender-400">{value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="order-first md:order-last">
+              <img 
+                src="/1 carreer.png" 
+                alt="Lover Era at KelceTS" 
+                className="w-full h-auto rounded-2xl shadow-2xl border-2 border-chiefs-red-500/30"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Roles Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
-            {t.rolesTitle}
-          </h2>
-          <p className="text-base sm:text-lg leading-relaxed mb-8 sm:mb-12 text-gray-300">
-            {t.rolesDescription}
-          </p>
-          
-          <div className="grid gap-6 sm:gap-8 mb-8 sm:mb-12">
-            {t.roles.map((role, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 sm:p-8 border border-white/20 hover:border-chiefs-red-500/50 transition-all duration-300">
-                <h3 className="text-lg sm:text-xl font-bold text-lavender-400 mb-2 sm:mb-3">
-                  {role.title}
-                </h3>
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                  {role.description}
-                </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-last md:order-first">
+              <img 
+                src="/2 carreer.png" 
+                alt="Join our team" 
+                className="w-full h-auto rounded-2xl shadow-2xl border-2 border-lavender-500/30"
+              />
+            </div>
+            
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
+                {t.rolesTitle}
+              </h2>
+              <p className="text-base sm:text-lg leading-relaxed mb-8 sm:mb-12 text-gray-300">
+                {t.rolesDescription}
+              </p>
+              
+              <div className="grid gap-6 sm:gap-8 mb-8 sm:mb-12">
+                {t.roles.map((role, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 sm:p-8 border border-white/20 hover:border-chiefs-red-500/50 transition-all duration-300">
+                    <h3 className="text-lg sm:text-xl font-bold text-lavender-400 mb-2 sm:mb-3">
+                      {role.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                      {role.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="text-center">
-            <a 
-              href="#roles" 
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-chiefs-red-500 to-lavender-500 text-white font-bold rounded-full text-base sm:text-lg hover:from-chiefs-red-600 hover:to-lavender-600 transition-all duration-300 transform hover:scale-105"
-            >
-              {t.viewRolesBtn}
-            </a>
+              <div className="text-center md:text-left">
+                <a 
+                  href="#roles" 
+                  className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-chiefs-red-500 to-lavender-500 text-white font-bold rounded-full text-base sm:text-lg hover:from-chiefs-red-600 hover:to-lavender-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  {t.viewRolesBtn}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -175,26 +209,38 @@ const Careers = ({ language = 'en' }) => {
       {/* Onboarding Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-lavender-500/10 to-chiefs-red-500/10">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
-            {t.onboardingTitle}
-          </h2>
-          <div 
-            className="text-base sm:text-lg leading-relaxed mb-8 text-gray-300"
-            dangerouslySetInnerHTML={{ __html: t.onboardingDescription }}
-          />
-          
-          <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-            {t.onboardingFeatures.map((feature, index) => (
-              <li key={index} className="flex items-start space-x-3">
-                <span className="text-base sm:text-lg text-gray-300" dangerouslySetInnerHTML={{ __html: feature }} />
-              </li>
-            ))}
-          </ul>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-chiefs-red-500">
+                {t.onboardingTitle}
+              </h2>
+              <div 
+                className="text-base sm:text-lg leading-relaxed mb-8 text-gray-300"
+                dangerouslySetInnerHTML={{ __html: t.onboardingDescription }}
+              />
+              
+              <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
+                {t.onboardingFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <span className="text-base sm:text-lg text-gray-300" dangerouslySetInnerHTML={{ __html: feature }} />
+                  </li>
+                ))}
+              </ul>
 
-          <div 
-            className="text-base sm:text-lg mb-8 sm:mb-12 text-gray-300"
-            dangerouslySetInnerHTML={{ __html: t.onboardingNote }}
-          />
+              <div 
+                className="text-base sm:text-lg mb-8 sm:mb-12 text-gray-300"
+                dangerouslySetInnerHTML={{ __html: t.onboardingNote }}
+              />
+            </div>
+            
+            <div className="order-first md:order-last">
+              <img 
+                src="/3 carreer.png" 
+                alt="KelceTS Onboarding Experience" 
+                className="w-full h-auto rounded-2xl shadow-2xl border-2 border-chiefs-red-500/30 rotate-3 hover:rotate-0 transition-transform duration-500"
+              />
+            </div>
+          </div>
 
           <div className="text-center space-y-6">
             <a 
